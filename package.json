@@ -1,0 +1,12 @@
+{
+    "version": "1.0.0",
+    "name": "pan.enrollforecast.dataprovider",
+    "cordova_name": "Data Provider",
+    "description": "Provides data for EnrollForSure project",
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

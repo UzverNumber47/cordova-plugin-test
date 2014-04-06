@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="pan.enrollmentforecast.dataprovider"
+    version="1.0.0">
+    <engines>
+    	<engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <name>Data Provider</name>
+    <description>Provides data for EnrollForSure project</description>
+    <author>UzverNumber47</author>
+    <keywords>data, provider, thrift</keywords>
+    <license>MIT</license>
+	<js-module src="www/DataProvider.js" name="DataProvider">
+		<clobbers target="window.DataProvider" />
+	</js-module>
+	<platform name="android">
+        <!-- android-specific elements -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="DataProvider">
+                <param name="android-package" value="pan.enrollmentforecast.DataProvider.DataProvider" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <source-file src="src/android/DataProvider.java" target-dir="src/pan/enrollmentforecast/DataProvider" />
+    </platform>
+</plugin>
