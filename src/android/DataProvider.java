@@ -22,7 +22,7 @@ public class DataProvider extends CordovaPlugin {
      * @return              A PluginResult object with a status and message.
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        try {
+       
             System.out.println("In execute! ");
             if (action.equals("getExamList")) {
                 callbackContext.success ( "Success!!!" );        
@@ -31,9 +31,6 @@ public class DataProvider extends CordovaPlugin {
             } else {
                 return false;
             }
-        } catch (JSONException e) {
-            callbackContext.error ( "JSON Exception" );
-            return true;
-        }
+        
     }
 }
